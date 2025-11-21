@@ -1,0 +1,184 @@
+@import '../1-base/variables';
+
+
+// Header (Name / State / City / Actions)
+.employees__header {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 2fr;
+  padding: 0 60px 0 56px;;
+  margin-bottom: $spacing-sm;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  font-weight: $font-weight-regular;
+
+  .employees__column {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+    color: $color-text-location;
+    font-weight: 400;
+  }
+}
+
+
+
+.employees__column--name {
+  padding-left: 8px;
+}
+
+.employees__column--actions {
+  justify-self: flex-end;
+}
+
+.employees__column-sort-icon {
+  width: 24px;
+  height: 24px;
+}
+
+// employees list
+.employee-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+// card base
+.employee-row {
+  background-color: $color-bg-card;
+  border-radius: 19px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+// main line of the card
+.employee-row__main {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 4fr)   // Name
+    minmax(0, 3fr)   // State
+    minmax(0, 3fr)   // City
+    minmax(0, 2.5fr);// Actions
+  align-items: center;
+  padding: 14px 32px;
+}
+
+
+// line highlighted (Lily)
+.employee-row__main--highlight {
+  background-color: $color-bg-row-highlight;
+  border-radius: 19px 19px 0 0;
+  padding: 14px 32px;
+  height: 70px;
+}
+
+// cell Name (avatar + text)
+.employee-row__cell--name {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.employee-row__name {
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  font-weight: $font-weight-medium;
+  color: $color-text-name;
+}
+
+// circular avatar
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+// other cells
+.employee-row__cell {
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  color: $color-text-location; // states/cities
+}
+
+.employee-row__cell--status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: $spacing-sm;
+}
+
+// badge Active
+.badge {
+  padding: 2px 12px;
+  border-radius: $radius-md;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+}
+
+.badge--success {
+  background-color: $color-success-bg;
+  color: $color-success-text;
+}
+
+// Lily Jones
+.employee-row--with-details .badge--success {
+  background-color: $color-success-bg-inverted;
+  color: $color-success-text-inverted;
+}
+
+// button with arrow (up/down)
+.employee-row__status-toggle {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-row__status-icon {
+  width: 14px;
+  height: 14px;
+}
+
+// extra details (only Lily Jones)
+.employee-row__details {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 3fr)
+    minmax(0, 3fr)
+    minmax(0, 4fr);
+  column-gap: 72px;
+  padding: 16px 32px 24px 32px;
+  margin-top: -2px;
+}
+
+.employee-row__details-column {
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+}
+
+.employee-row__details-column p {
+  margin-top: 0;
+}
+
+.employee-row__details-title {
+  margin-bottom: $spacing-sm;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  font-weight: $font-weight-medium;
+  color: $color-text-main;
+}
+
+// contacts (phone / email)
+.employee-row__contact {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-xs;
+}
+
+.employee-row__contact-icon {
+  width: 14px;
+  height: 14px;
+}

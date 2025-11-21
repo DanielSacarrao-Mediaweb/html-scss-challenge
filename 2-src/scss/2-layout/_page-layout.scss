@@ -1,0 +1,17 @@
+@import '../1-base/variables';
+
+.sidebar {
+  width: 80px;
+  background-color: $color-bg-sidebar;
+  padding: $spacing-lg $spacing-sm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 $radius-xl $radius-xl 0;
+}
+
+.main {
+  flex: 1;
+  padding: $spacing-xl;
+  position: relative;
+}

@@ -1,0 +1,66 @@
+// main colors
+
+$color-bg-app: #F4FAFF;
+$color-bg-sidebar: #7030A0;
+$color-bg-card: #FFFFFF;
+$color-bg-row-highlight: #E9ECEF;
+$color-bg-page: #F4FAFF;
+
+$color-primary: #7030A0;
+$color-primary-light: #E8F1F9;
+
+$color-text-filters: #4F575E;
+
+$color-text-name: #272B30;
+$color-text-location: #343A40;
+$color-text-main: #272B30;
+$color-text-muted: #85A5C2;
+$color-text-link: #009DDE;
+
+$color-success-bg: #EBF7ED;
+$color-success-text: #2A843C;
+
+//Lily Jones
+$color-success-bg-inverted: #2A843C;
+$color-success-text-inverted: #EBF7ED;
+
+$color-border-soft: #D4E3F0;
+
+// spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// radius
+$radius-lg: 19px;     // employee cards
+$radius-md: 24px;     // Active chips
+$radius-pill: 80px;   // buttons (Primary and Secondary Action)
+$radius-xl: 51px;     // sidebar screen, side arrow, backgrounds
+
+$shadow-soft: 0 14px 30px rgba(15, 23, 42, 0.08);
+
+
+// tipography
+
+$font-family-main: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+$font-size-xs: 12px;
+$line-height-xs: 16px;
+$font-size-s: 14px;
+$line-height-s: 24px;
+
+$font-size-m: 16px;
+$line-height-m: 24px;
+
+$font-size-xl: 28px;
+$line-height-xl: 32px;
+
+$font-size-title: 32px;
+$line-height-title: 40px;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;

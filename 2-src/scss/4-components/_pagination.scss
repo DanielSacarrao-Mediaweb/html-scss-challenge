@@ -1,0 +1,70 @@
+@import '../1-base/variables';
+
+// footer + pagination
+
+.employees__footer {
+  margin-top: $spacing-lg;
+  padding: 0 $spacing-lg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  color: $color-text-muted;
+}
+
+// page controll
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.pagination__control {
+  border: none;
+  background: transparent;
+  padding: $spacing-xs;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__control-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.pagination__page {
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  color: $color-text-muted;
+}
+
+.pagination__page--active {
+  color: $color-primary;
+  font-weight: $font-weight-regular;
+}
+
+.pagination__page-bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.pagination__page-label {
+  position: relative;
+}
+
+.pagination__ellipsis {
+  margin: 0 $spacing-xs;
+}

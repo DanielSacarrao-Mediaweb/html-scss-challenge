@@ -3,3 +3,16 @@
 
 /*  Widgets > Table                                                     */
 @import "table";
+
+
+
+@import 'buttons';
+@import 'search-bar';
+
+// Original imports from boilerplate
+@import 'button-group';
+@import 'table';
+
+// Widgets added to this screen
+@import 'buttons';
+@import 'search-bar';

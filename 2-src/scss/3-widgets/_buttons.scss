@@ -1,0 +1,39 @@
+@import '../1-base/variables';
+
+.btn {
+  border: none;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $radius-pill;
+  cursor: pointer;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  font-weight: $font-weight-medium;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background-color: $color-primary;
+  color: #ffffff;
+}
+
+.btn--secondary {
+  background-color: #ffffff;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+}
+
+.btn--filters {
+  background-color: #E9EDF7;
+  color: $color-text-filters;
+  border-radius: 8px;
+  padding: 8px;
+  gap: 8px;
+  border: none;
+  position: relative;
+  top: 66px;
+  right: 40px;
+
+  .btn--filters:hover {
+    color: darken($color-text-filters, 8%);
+  }
+}

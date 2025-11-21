@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+    />
+
+    <link
+        rel="stylesheet"
+        href="./1-dist/css/ClientName_Theme.css"
+    />
+</head>
+</head>
+<body class="app">
+    <aside class="sidebar" aria-label="Main navigation">
+        <!-- logo + angle-double-right -->
+        <div class="sidebar__header">
+            <img
+                src="assets/icons/logo.svg"
+                alt="App logo"
+                class="sidebar__logo-img"
+            />
+
+            <button class="sidebar__toggle" aria-label="Toggle menu">
+                <img
+                    src="assets/icons/angle-double-right.svg"
+                    alt=""
+                    class="sidebar__toggle-icon" />
+            </button>
+        </div>
+
+        <nav class="sidebar__nav">
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav__item">
+                    <a href="#" aria-label="Dashboard">
+                        <img
+                        src="assets/icons/dashboard.svg"
+                        alt=""
+                        class="sidebar-nav__icon"
+                        />
+                    </a>
+                </li>
+
+                <li class="sidebar-nav__item">
+                <a href="#" aria-label="Activity">
+                    <img
+                        src="assets/icons/chart.svg"
+                        alt=""
+                        class="sidebar-nav__icon"
+                    />
+                    </a>
+                </li>
+
+                <li class="sidebar-nav__item">
+                    <a href="#" aria-label="Favorites">
+                        <img
+                            src="assets/icons/like.svg"
+                            alt=""
+                            class="sidebar-nav__icon"
+                        />
+                    </a>
+                </li>
+
+                <li class="sidebar-nav__item sidebar-nav__item--profile">
+                    <div class="sidebar-nav__icon-box">
+                        <img src="assets/icons/profile.svg" alt="">
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="sidebar__settings" type="button" aria-label="Settings">
+            <img
+                src="assets/icons/cogwheel.svg"
+                alt=""
+                class="sidebar__settings-icon"
+            />
+        </button>
+    </aside>
+
+    <main class="main">
+        <header class="main-header">
+            <h1 class="main-header__title">Employees</h1>
+
+            <div class="main-header__actions">
+                <button class="btn btn--secondary" type="button">Secondary Action</button>
+                <button class="btn btn--primary" type="button">Primary Action</button>
+            </div>
+        </header>
+
+        <!--Advanced Filters button-->
+        <div class="main-header__filters">
+            <button class="btn btn--filters" type="button">Advanced Filters</button>
+        </div>
+
+        <section class="employees" aria-label="Employees list">
+            <!--Search bar-->
+            <form class="search-bar" role="search">
+                <label class="search-bar__label" for="employee-search">
+                    Search for athlete profile data, workout and meditation sessions
+                </label>
+
+                <div class="search-bar__field">
+                    <img
+                        src="assets/icons/search.svg"
+                        alt=""
+                        class="search-bar__icon"
+                        aria-hidden="true"
+                    />
+                    <input
+                        id="employee-search"
+                        class="search-bar__input"
+                        type="search"
+                        placeholder="Search for athlete profile data, workout and meditation sessions"
+                    />
+                </div>
+            </form>
+
+            <div class="employees__header">
+                <span class="employees__column employees__column--name">
+                    Name
+                    <img
+                    src="assets/icons/unsorted.svg"
+                    alt=""
+                    class="employees__column-sort-icon"
+                    />
+                </span>
+
+                <span class="employees__column">
+                    State
+                    <img
+                    src="assets/icons/sorted.svg"
+                    alt=""
+                    class="employees__column-sort-icon"
+                    />
+                </span>
+
+                <span class="employees__column">
+                    City
+                    <img
+                    src="assets/icons/sorted.svg"
+                    alt=""
+                    class="employees__column-sort-icon"
+                    />
+                </span>
+
+                <span class="employees__column employees__column--actions">
+                    Actions
+                    <img
+                    src="assets/icons/sorted.svg"
+                    alt=""
+                    class="employees__column-sort-icon"
+                    />
+                </span>
+                </div>
+
+                <!-- lista de employees -->
+                <div class="employee-list">
+                    <!-- Bernard Nguyen -->
+                    <article class="employee-row">
+                        <div class="employee-row__main">
+                            <div class="employee-row__cell employee-row__cell--name">
+                                <img
+                                class="avatar"
+                                src="assets/avatars/bernard-nguyen.png"
+                                alt="Bernard Nguyen"
+                                />
+                                <span class="employee-row__name">Bernard Nguyen</span>
+                            </div>
+
+                            <div class="employee-row__cell">Walkerville</div>
+                            <div class="employee-row__cell">Connecticut</div>
+
+                            <div class="employee-row__cell employee-row__cell--status">
+                                <span class="badge badge--success">Active</span>
+                                <button
+                                    class="employee-row__status-toggle"
+                                    type="button"
+                                    aria-label="Show details for Bernard Nguyen"
+                                >
+                                    <img
+                                    src="assets/icons/arrow-down.svg"
+                                    alt=""
+                                    class="employee-row__status-icon"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Floyd Warren -->
+                    <article class="employee-row">
+                        <div class="employee-row__main">
+                            <div class="employee-row__cell employee-row__cell--name">
+                            <img
+                                class="avatar"
+                                src="assets/avatars/floyd-warren.png"
+                                alt="Floyd Warren"
+                            />
+                            <span class="employee-row__name">Floyd Warren</span>
+                            </div>
+
+                            <div class="employee-row__cell">Efrenbury</div>
+                            <div class="employee-row__cell">Montana</div>
+
+                            <div class="employee-row__cell employee-row__cell--status">
+                            <span class="badge badge--success">Active</span>
+                            <button
+                                class="employee-row__status-toggle"
+                                type="button"
+                                aria-label="Show details for Floyd Warren"
+                            >
+                                <img
+                                src="assets/icons/arrow-down.svg"
+                                alt=""
+                                class="employee-row__status-icon"
+                                />
+                            </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Francisco Alexander -->
+                    <article class="employee-row">
+                        <div class="employee-row__main">
+                            <div class="employee-row__cell employee-row__cell--name">
+                                <img
+                                    class="avatar"
+                                    src="assets/avatars/francisco-alexander.png"
+                                    alt="Francisco Alexander"
+                                />
+                                <span class="employee-row__name">Francisco Alexander</span>
+                            </div>
+
+                            <div class="employee-row__cell">Lornaland</div>
+                            <div class="employee-row__cell">Montana</div>
+
+                            <div class="employee-row__cell employee-row__cell--status">
+                                <span class="badge badge--success">Active</span>
+                                <button
+                                    class="employee-row__status-toggle"
+                                    type="button"
+                                    aria-label="Show details for Francisco Alexander"
+                                >
+                                    <img
+                                    src="assets/icons/arrow-down.svg"
+                                    alt=""
+                                    class="employee-row__status-icon"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Lily Jones (linha destacada + detalhes visiveis) -->
+                    <article class="employee-row employee-row--with-details">
+                        <!-- linha principal destacada -->
+                        <div class="employee-row__main employee-row__main--highlight">
+                            <div class="employee-row__cell employee-row__cell--name">
+                                <img
+                                    class="avatar"
+                                    src="assets/avatars/lily-jones.png"
+                                    alt="Lily Jones"
+                                />
+                                <span class="employee-row__name">Lily Jones</span>
+                            </div>
+
+                            <div class="employee-row__cell">East Peggiestad</div>
+                            <div class="employee-row__cell">Wisconsin</div>
+
+                            <div class="employee-row__cell employee-row__cell--status">
+                                <span class="badge badge--success">Active</span>
+                                <button
+                                    class="employee-row__status-toggle employee-row__status-toggle--open"
+                                    type="button"
+                                    aria-label="Hide details for Lily Jones"
+                                >
+                                    <img
+                                    src="assets/icons/arrow-up.svg"
+                                    alt=""
+                                    class="employee-row__status-icon"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- detalhes visiveis -->
+                        <div class="employee-row__details">
+                            <div class="employee-row__details-column">
+                                <h2 class="employee-row__details-title">Personal Detail</h2>
+
+                                <p class="employee-row__contact">
+                                    <img
+                                        src="assets/icons/phone.svg"
+                                        alt=""
+                                        class="employee-row__contact-icon"
+                                    />
+                                    <a>736-030-6955</a>
+                                </p>
+
+                                <p class="employee-row__contact">
+                                    <img
+                                        src="assets/icons/envelope.svg"
+                                        alt=""
+                                        class="employee-row__contact-icon"
+                                    />
+                                    <a>maximilian.roghan@stehr.org</a>
+                                </p>
+                            </div>
+
+                            <div class="employee-row__details-column">
+                                <h2 class="employee-row__details-title">Bio</h2>
+                                <p>A good listener, always looking to respond to the</p>
+                            </div>
+
+                            <div class="employee-row__details-column">
+                                <p>
+                                    Experience in handling returns and complaints. Headed
+                                    revisions of customer satisfaction processes
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Lee Simmmmons -->
+                    <article class="employee-row">
+                        <div class="employee-row__main">
+                            <div class="employee-row__cell employee-row__cell--name">
+                                <img
+                                    class="avatar"
+                                    src="assets/avatars/lee-simmmmons.png"
+                                    alt="Lee Simmmmons"
+                                />
+                                <span class="employee-row__name">Lee Simmmmons</span>
+                            </div>
+
+                            <div class="employee-row__cell">Wadchester</div>
+                            <div class="employee-row__cell">Nebraska</div>
+
+                            <div class="employee-row__cell employee-row__cell--status">
+                                <span class="badge badge--success">Active</span>
+                                <button
+                                    class="employee-row__status-toggle"
+                                    type="button"
+                                    aria-label="Show details for Lee Simmmmons"
+                                >
+                                    <img
+                                    src="assets/icons/arrow-down.svg"
+                                    alt=""
+                                    class="employee-row__status-icon"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Colleen Warren -->
+                    <article class="employee-row">
+                        <div class="employee-row__main">
+                            <div class="employee-row__cell employee-row__cell--name">
+                                <img
+                                    class="avatar"
+                                    src="assets/avatars/colleen-warren.png"
+                                    alt="Colleen Warren"
+                                />
+                                <span class="employee-row__name">Colleen Warren</span>
+                            </div>
+
+                            <div class="employee-row__cell">Jonathanprot</div>
+                            <div class="employee-row__cell">New Hampshire</div>
+
+                            <div class="employee-row__cell employee-row__cell--status">
+                                <span class="badge badge--success">Active</span>
+                                <button
+                                    class="employee-row__status-toggle"
+                                    type="button"
+                                    aria-label="Show details for Colleen Warren"
+                                >
+                                    <img
+                                    src="assets/icons/arrow-down.svg"
+                                    alt=""
+                                    class="employee-row__status-icon"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- footer: resumo + paginacao -->
+                <footer class="employees__footer">
+                    <p class="employees__summary">1 to 4 of 65 records</p>
+
+                    <nav class="pagination" aria-label="Employee pages">
+                        <button
+                            class="pagination__control"
+                            type="button"
+                            aria-label="Previous page"
+                        >
+                            <img
+                            src="assets/icons/pag-left.svg"
+                            alt=""
+                            class="pagination__control-icon"
+                            />
+                        </button>
+
+                        <!-- pag1 selected -->
+                        <button
+                            class="pagination__page pagination__page--active"
+                            type="button"
+                            aria-label="Page 1"
+                        >
+                            <img
+                            src="assets/icons/1st-background.svg"
+                            alt=""
+                            class="pagination__page-bg"
+                            aria-hidden="true"
+                            />
+                            <span class="pagination__page-label">1</span>
+                        </button>
+
+                        <!-- outras pags -->
+                        <button class="pagination__page" type="button">2</button>
+                        <button class="pagination__page" type="button">3</button>
+                        <button class="pagination__page" type="button">4</button>
+                        <button class="pagination__page" type="button">5</button>
+
+                        <span class="pagination__ellipsis">…</span>
+
+                        <button
+                            class="pagination__control"
+                            type="button"
+                            aria-label="Next page"
+                        >
+                            <img
+                            src="assets/icons/pag-right.svg"
+                            alt=""
+                            class="pagination__control-icon"
+                            />
+                        </button>
+                    </nav>
+                </footer>
+                </section>
+
+                <!-- chevron left -->
+                <button
+                    class="page-arrow"
+                    type="button"
+                    aria-label="Go to next screen"
+                    >
+                    <img
+                        src="assets/icons/chevron-left.svg"
+                        alt=""
+                        class="page-arrow__icon"
+                    />
+                </button>
+            </main>
+    </body>
+</html>
