@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "vivaxy.vscode-conventional-commits",
+        "eamodio.gitlens",
+        "ryuta46.multi-command",
+        "mrmlnc.vscode-postcss-sorting",
+        "tahabasri.snippets",
+        "pkief.material-icon-theme",
+        "aaron-bond.better-comments",
+        "editorconfig.editorconfig"
+    ]
+}

@@ -1,0 +1,6 @@
+/.husky/_/
+node_modules/
+
+icons-config.json
+package-lock.json
+/1-dist/css/
