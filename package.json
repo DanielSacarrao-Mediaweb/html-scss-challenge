@@ -7,8 +7,7 @@
     "gulp": "gulp",
     "clean": "gulp clean",
     "style": "gulp style",
-    "watch": "gulp watch",
-    "prepare": "husky install"
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -28,13 +27,12 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "husky": "^8.0.1",
+    "node-sass": "^8.0.0",
     "postcss": "^8.4.17",
-    "postcss-sorting": "^7.0.1",
-    "node-sass": "^8.0.0"
+    "postcss-sorting": "^7.0.1"
   },
   "browserslist": [
-      "last 3 version",
-      "> 2%"
+    "last 3 version",
+    "> 2%"
   ]
 }
