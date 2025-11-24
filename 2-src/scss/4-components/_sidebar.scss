@@ -66,16 +66,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 11px;
+        transition: background 0.2s ease;
 
     img {
         transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
-    &:hover {
+    &--dashboard:hover,
+    &--activity:hover,
+    &--favorites:hover {
+        background-color: #552479; // mais escuro
+        cursor: pointer;
         img {
         opacity: 0.7;
         transform: scale(1.08);
         }
+  }
+
+    &--profile:hover {
+        background: none !important;
+        cursor: default !important;
     }
 }
 

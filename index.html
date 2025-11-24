@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employees</title>
-    
+
     <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
@@ -36,7 +36,7 @@
 
         <nav class="sidebar__nav">
             <ul class="sidebar-nav">
-                <li class="sidebar-nav__item">
+                <li class="sidebar-nav__item sidebar-nav__item--dashboard">
                     <a href="#" aria-label="Dashboard">
                         <img
                         src="assets/icons/dashboard.svg"
@@ -46,17 +46,17 @@
                     </a>
                 </li>
 
-                <li class="sidebar-nav__item">
-                <a href="#" aria-label="Activity">
-                    <img
-                        src="assets/icons/chart.svg"
-                        alt=""
-                        class="sidebar-nav__icon"
-                    />
+                <li class="sidebar-nav__item sidebar-nav__item--activity">
+                    <a href="#" aria-label="Activity">
+                        <img
+                            src="assets/icons/chart.svg"
+                            alt=""
+                            class="sidebar-nav__icon"
+                        />
                     </a>
                 </li>
 
-                <li class="sidebar-nav__item">
+                <li class="sidebar-nav__item  sidebar-nav__item--favorites">
                     <a href="#" aria-label="Favorites">
                         <img
                             src="assets/icons/like.svg"
@@ -67,9 +67,13 @@
                 </li>
 
                 <li class="sidebar-nav__item sidebar-nav__item--profile">
-                    <div class="sidebar-nav__icon-box">
-                        <img src="assets/icons/profile.svg" alt="">
-                    </div>
+                    <a href="#" aria-label="Profile">
+                        <img
+                            src="assets/icons/profile.svg"
+                            alt=""
+                            class="sidebar-nav__icon-box"
+                        />
+                    </a>
                 </li>
             </ul>
         </nav>

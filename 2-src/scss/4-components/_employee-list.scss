@@ -33,6 +33,18 @@
 .employees__column-sort-icon {
   width: 24px;
   height: 24px;
+
+  img {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  &:hover {
+    cursor: pointer;
+    img {
+        opacity: 0.7;
+        transform: scale(1.08);
+        }
+  }
 }
 
 // employees list
