@@ -48,6 +48,11 @@
   border-radius: 19px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
   overflow: hidden;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #F5F7FA;
+  }
 }
 
 // main line of the card

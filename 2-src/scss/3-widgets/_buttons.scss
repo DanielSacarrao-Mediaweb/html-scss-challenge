@@ -9,31 +9,43 @@
   line-height: $line-height-s;
   font-weight: $font-weight-medium;
   white-space: nowrap;
-}
 
-.btn--primary {
-  background-color: $color-primary;
-  color: #ffffff;
-}
+  &--primary {
+    background-color: $color-primary;
+    color: #ffffff;
+    transition: all 0.2s ease;
 
-.btn--secondary {
-  background-color: #ffffff;
-  color: $color-primary;
-  border: 1px solid $color-primary;
-}
-
-.btn--filters {
-  background-color: #E9EDF7;
-  color: $color-text-filters;
-  border-radius: 8px;
-  padding: 8px;
-  gap: 8px;
-  border: none;
-  position: relative;
-  top: 66px;
-  right: 40px;
-
-  .btn--filters:hover {
-    color: darken($color-text-filters, 8%);
+    &:hover {
+        background: #552479;
+    }
   }
+
+    &--secondary {
+        background-color: #ffffff;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        transition: all 0.2s ease;
+
+    &:hover {
+        background: #D2B4E8;
+        color: darken($color-primary, 8%);
+    }
+}
+
+    &--filters {
+        background-color: #E9EDF7;
+        color: $color-text-filters;
+        border-radius: 8px;
+        padding: 8px;
+        gap: 8px;
+        border: none;
+        position: relative;
+        top: 66px;
+        right: 40px;
+
+    &:hover {
+        color: darken($color-text-filters, 8%);
+        background: #ADB5BD;
+    }
+}
 }
