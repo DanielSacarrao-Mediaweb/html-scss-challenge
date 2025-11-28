@@ -6,7 +6,8 @@
   width: 112px;
   min-height: 100vh;
   background-color: $color-bg-sidebar;
-  border-radius: 0 24px 24px 0;
+  border-radius: 0 48px 48px 0;
+  z-index: 20;
 
     // header + arrow
     &__header {
@@ -76,7 +77,7 @@
     &--dashboard:hover,
     &--activity:hover,
     &--favorites:hover {
-        background-color: #552479; // mais escuro
+        background-color: #552479;
         cursor: pointer;
         img {
         opacity: 0.7;
@@ -114,10 +115,18 @@
         bottom: 24px;
         left: 50%;
         transform: translateX(-50%);
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 11px;
+
         background: transparent;
         border: none;
         padding: 0;
         cursor: pointer;
+        transition: background 0.2s ease;
 
     &-icon {
         width: 24px;
@@ -130,10 +139,11 @@
     }
 
     &:hover {
+        background-color: #552479; // igual aos outros ícones
         img {
-        opacity: 0.7;
-        transform: scale(1.08);
+            opacity: 0.7;
+            transform: scale(1.08);
         }
     }
-}
+  }
 }

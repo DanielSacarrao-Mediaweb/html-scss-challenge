@@ -4,25 +4,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: $spacing-sm;
+  margin-bottom: $spacing-lg;
 
     &__title {
         font-size: $font-size-title;
         line-height: $line-height-title;
         font-weight: $font-weight-medium;
         color: $color-primary;
-        position: relative;
-        top: 20px;
-        left: 10px;
     }
 
     &__actions {
         display: inline-flex;
         align-items: center;
         gap: $spacing-md;
-        position: relative;
-        top: 24px;
-        right: 24px;
     }
 
 // "Advanced Filters"
