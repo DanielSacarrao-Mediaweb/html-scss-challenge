@@ -1,8 +1,18 @@
 @import '../1-base/variables';
 
-.search-bar {
-  max-width: 520px;
+.filters-row {
+  display: flex;
+  padding: 8px 16px 3px 16px;
+  align-items: flex;
+  justify-content: space-between;
   margin-bottom: $spacing-lg;
+}
+
+.search-bar {
+  flex: 0 1 718px;
+  max-width: 718px;
+  width: 100%;
+  margin-bottom: 0;
 
     &__label {
         position: absolute;
@@ -31,8 +41,7 @@
     &__icon {
         width: 24px;
         height: 24px;
-        transition:
-        opacity 0.2s ease, transform 0.2s ease;
+        transition: opacity 0.2s ease, transform 0.2s ease;
 
         &:hover {
             cursor: pointer;

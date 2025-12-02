@@ -3,8 +3,11 @@
 // footer + pagination
 
 .employees__footer {
-  margin-top: $spacing-lg;
-  padding: 0 $spacing-lg;
+  margin: $spacing-lg 0 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 $spacing-xl;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,16 +56,18 @@
     &--active {
         color: $color-primary;
         font-weight: $font-weight-regular;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 56px;
+        border: 1px solid $color-primary;
+        background: #FFF;
     }
 
     &-bg {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 24px;
-        height: 24px;
-        transform: translate(-50%, -50%);
-        z-index: -1;
+        display: none;
     }
 
     &-label {

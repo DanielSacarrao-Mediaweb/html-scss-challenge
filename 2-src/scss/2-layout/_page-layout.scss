@@ -1,6 +1,6 @@
 @import '../1-base/variables';
 
-.sidebar {
+.sidemenu {
   width: 80px;
   background-color: $color-bg-sidebar;
   padding: $spacing-lg $spacing-sm;
@@ -10,17 +10,11 @@
   border-radius: 0 $radius-xl $radius-xl 0;
 }
 
-.main {
-  flex: 1;
-  padding: $spacing-xl;
-  position: relative;
-}
-
 // collapsed right sidebar
 .sidebar-right {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -390px;
   width: 390px;
   height: 1024px;
 

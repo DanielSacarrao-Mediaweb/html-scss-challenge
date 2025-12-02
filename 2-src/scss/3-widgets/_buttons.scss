@@ -36,16 +36,13 @@
         background-color: #E9EDF7;
         color: $color-text-filters;
         border-radius: 8px;
-        padding: 8px;
+        padding: 8px 16px;
         gap: 8px;
         border: none;
-        position: relative;
-        top: 66px;
-        right: 40px;
 
-    &:hover {
-        color: darken($color-text-filters, 8%);
-        background: #ADB5BD;
+        &:hover {
+            color: darken($color-text-filters, 8%);
+            background: #ADB5BD;
+        }
     }
-}
 }

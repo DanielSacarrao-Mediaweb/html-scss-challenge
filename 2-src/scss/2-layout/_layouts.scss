@@ -7,7 +7,7 @@
 .main {
   position: relative;
   flex: 1;
-  padding: 54px 64px 67px 150px;
+  padding: 54px 64px 67px 38px;
   margin: auto;
   background-color: $color-bg-page;
   border-radius: 48px;
@@ -16,12 +16,12 @@
 
 // Right sidebar button
 .page-arrow {
-  position: fixed;
+  position: absolute;
   top: 12%;
   right: 0;
   transform: translateY(-50%);
 
-  width: 55px;
+  width: 45px;
   height: 92px;
 
   display: flex;
@@ -44,6 +44,5 @@
     width: 40px;
     height: 40px;
     position: relative;
-    right: 10px;
   }
 }

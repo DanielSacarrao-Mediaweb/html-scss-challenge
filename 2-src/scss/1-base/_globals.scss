@@ -44,11 +44,12 @@ a {
 .app {
   min-height: 100vh;
   display: flex;
+  background-color: $color-bg-app;
 }
 
 /* remove bullets from sidebar */
-.sidebar-nav,
-.sidebar-nav__item {
+.sidemenu-nav,
+.sidemenu-nav__item {
   list-style: none;
   padding: 0;
   margin: 0;

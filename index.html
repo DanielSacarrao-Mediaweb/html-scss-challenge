@@ -17,72 +17,72 @@
 </head>
 </head>
 <body class="app">
-    <aside class="sidebar" aria-label="Main navigation">
+    <aside class="sidemenu" aria-label="Main navigation">
         <!-- logo + angle-double-right -->
-        <div class="sidebar__header">
+        <div class="sidemenu__header">
             <img
                 src="assets/icons/logo.svg"
                 alt="App logo"
-                class="sidebar__logo-img"
+                class="sidemenu__logo-img"
             />
 
-            <button class="sidebar__toggle" aria-label="Toggle menu">
+            <button class="sidemenu__toggle" aria-label="Toggle menu">
                 <img
                     src="assets/icons/angle-double-right.svg"
                     alt=""
-                    class="sidebar__toggle-icon" />
+                    class="sidemenu__toggle-icon" />
             </button>
         </div>
 
-        <nav class="sidebar__nav">
-            <ul class="sidebar-nav">
-                <li class="sidebar-nav__item sidebar-nav__item--dashboard">
+        <nav class="sidemenu__nav">
+            <ul class="sidemenu-nav">
+                <li class="sidemenu-nav__item sidemenu-nav__item--dashboard">
                     <a href="#" aria-label="Dashboard">
                         <img
                         src="assets/icons/dashboard.svg"
                         alt=""
-                        class="sidebar-nav__icon"
+                        class="sidemenu-nav__icon"
                         />
                     </a>
                 </li>
 
-                <li class="sidebar-nav__item sidebar-nav__item--activity">
+                <li class="sidemenu-nav__item sidemenu-nav__item--activity">
                     <a href="#" aria-label="Activity">
                         <img
                             src="assets/icons/chart.svg"
                             alt=""
-                            class="sidebar-nav__icon"
+                            class="sidemenu-nav__icon"
                         />
                     </a>
                 </li>
 
-                <li class="sidebar-nav__item  sidebar-nav__item--favorites">
+                <li class="sidemenu-nav__item  sidemenu-nav__item--favorites">
                     <a href="#" aria-label="Favorites">
                         <img
                             src="assets/icons/like.svg"
                             alt=""
-                            class="sidebar-nav__icon"
+                            class="sidemenu-nav__icon"
                         />
                     </a>
                 </li>
 
-                <li class="sidebar-nav__item sidebar-nav__item--profile">
+                <li class="sidemenu-nav__item sidemenu-nav__item--profile">
                     <a href="#" aria-label="Profile">
                         <img
                             src="assets/icons/profile.svg"
                             alt=""
-                            class="sidebar-nav__icon-box"
+                            class="sidemenu-nav__icon-box"
                         />
                     </a>
                 </li>
             </ul>
         </nav>
 
-        <button class="sidebar__settings" type="button" aria-label="Settings">
+        <button class="sidemenu__settings" type="button" aria-label="Settings">
             <img
                 src="assets/icons/cogwheel.svg"
                 alt=""
-                class="sidebar__settings-icon"
+                class="sidemenu__settings-icon"
             />
         </button>
     </aside>
@@ -97,33 +97,34 @@
             </div>
         </header>
 
-        <!--Advanced Filters button-->
-        <div class="main-header__filters">
-            <button class="btn btn--filters" type="button">Advanced Filters</button>
-        </div>
-
+        <!--Search bar + Advanced Filters button-->
         <section class="employees" aria-label="Employees list">
-            <!--Search bar-->
-            <form class="search-bar" role="search">
-                <label class="search-bar__label" for="employee-search">
-                    Search for athlete profile data, workout and meditation sessions
-                </label>
+            <div class="filters-row">
+                <form class="search-bar" role="search">
+                    <label class="search-bar__label" for="employee-search">
+                        Search for athlete profile data, workout and meditation sessions
+                    </label>
 
-                <div class="search-bar__field">
-                    <img
-                        src="assets/icons/search.svg"
-                        alt=""
-                        class="search-bar__icon"
-                        aria-hidden="true"
-                    />
-                    <input
-                        id="employee-search"
-                        class="search-bar__input"
-                        type="search"
-                        placeholder="Search for athlete profile data, workout and meditation sessions"
-                    />
-                </div>
-            </form>
+                    <div class="search-bar__field">
+                        <img
+                            src="assets/icons/search.svg"
+                            alt=""
+                            class="search-bar__icon"
+                            aria-hidden="true"
+                        />
+                        <input
+                            id="employee-search"
+                            class="search-bar__input"
+                            type="search"
+                            placeholder="Search for athlete profile data, workout and meditation sessions"
+                        />
+                    </div>
+                </form>
+
+                <button class="btn btn--filters" type="button">
+                    Advanced Filters
+                </button>
+            </div>
 
             <div class="employees__header">
                 <span class="employees__column employees__column--name">
@@ -304,7 +305,7 @@
                                         alt=""
                                         class="employee-row__contact-icon"
                                     />
-                                    <a>736-030-6955</a>
+                                    <a href="tel:736-030-6955">736-030-6955</a>
                                 </p>
 
                                 <p class="employee-row__contact">
@@ -313,7 +314,7 @@
                                         alt=""
                                         class="employee-row__contact-icon"
                                     />
-                                    <a>maximilian.roghan@stehr.org</a>
+                                    <a href="mailto:maximilian.rogahn@stehr.org">maximilian.rogahn@stehr.org</a>
                                 </p>
                             </div>
 
@@ -465,7 +466,17 @@
                 </button>
             </main>
             <aside class="sidebar-right" aria-label="Secondary panel">
-                
+                <button
+                    class="page-arrow"
+                    type="button"
+                    aria-label="Open secondary panel"
+                >
+                    <img
+                        src="assets/icons/chevron-left.svg"
+                        alt=""
+                        class="page-arrow__icon"
+                    />
+                </button>
             </aside>
     </body>
 </html>
