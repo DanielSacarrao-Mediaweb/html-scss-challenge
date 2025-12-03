@@ -1,0 +1,69 @@
+@import '../1-base/variables';
+
+// right sidebar default state
+.sidebar-right {
+    position: relative;
+    width: 390px;
+    flex-shrink: 0;
+    height: 100%;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: $spacing-lg;
+    background: $color-bg-card;
+    border-radius: 48px 0 0 48px;
+    box-shadow: $shadow-soft;
+    z-index: 10;
+
+    // animation when collapsing/expanding
+    transition: transform 0.3s ease;
+}
+
+// collapsed sidebar state
+.app--sidebar-right-collapsed {
+    .sidebar-right {
+        transform: translateX(100%); // slide out to the right
+    }
+
+    .main {
+        margin-right: 32px;
+    }
+}
+
+// right sidebar toggle button
+.page-arrow--right {
+    position: absolute;
+    top: 12%;
+    left: -$radius-md;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: $radius-md 0 0 $radius-md;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    z-index: 12;
+
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .page-arrow__icon {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease; // rotate when collapsed
+    }
+  }
+
+// rotate arrow icon when sidebar is collapsed
+.app--sidebar-right-collapsed .page-arrow--right .page-arrow__icon {
+    transform: rotate(180deg);
+}

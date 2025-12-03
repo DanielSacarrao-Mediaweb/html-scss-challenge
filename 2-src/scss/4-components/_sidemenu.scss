@@ -2,148 +2,297 @@
 
 // left sidebar (sidemenu)
 .sidemenu {
-  position: relative;
-  width: 112px;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+
+  height: 100vh;
   min-height: 100vh;
+
+  width: 112px; // collapsed width
+  padding: 24px 16px 32px;
+
   background-color: $color-bg-sidebar;
-  border-radius: 0 24px 24px 0;
-  z-index: 20;
+  border-radius: 0 48px 48px 0;
 
-    // header + arrow
-    &__header {
-        position: relative;
-        height: 64px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    &__logo-img {
-        position: absolute;
-        top: -10px;
-        left: -40px;
-        width: 36px;
-        height: 30px;
-    }
+  z-index: 30;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
 
-    &__toggle {
-        position: absolute;
-        top: -8px;
-        left: 18px;
-        background: transparent;
-        border: none;
-        padding: 0;
-
-        &-icon {
-            width: 24px;
-            height: 24px;
-        }
-
-        img {
-            transition: opacity 0.2s ease, transform 0.2s ease;
-        }
-
-        &:hover {
-            cursor: pointer;
-            img {
-            opacity: 0.7;
-            transform: scale(1.08);
-            }
-        }
-    }
-
-    // sidemenu icons
-    &__nav {
-        position: absolute;
-        top: 203px;
-        left: 32px;
-    }
-
-    &-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-
-    &__item {
-        width: 48px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 11px;
-        transition: background 0.2s ease;
-
-    img {
-        transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    &--dashboard:hover,
-    &--activity:hover,
-    &--favorites:hover {
-        background-color: #552479;
-        cursor: pointer;
-        img {
-        opacity: 0.7;
-        transform: scale(1.08);
-        }
+// header (logo + brand + toggle)
+.sidemenu {
+  &__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 64px;
   }
 
-    &--profile:hover {
-        background: none !important;
-        cursor: default !important;
-    }
-}
+  // logo + brand wrapper (left side)
+  &__logo-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 
-    &__icon {
-        width: 24px;
-        height: 24px;
-        display: block;
-    }
+  &__logo-img {
+    width: 36px;
+    height: 30px;
+    flex-shrink: 0;
+  }
 
-    &__item--profile &__icon-box {
-        width: 48px;
-        height: 48px;
-        border-radius: 8px;
-        background-color: #5A1E8A;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
+  // brand image (hidden when collapsed)
+  &__brand {
+    display: none;
+  }
 
-    // settings icon
-    &__settings {
-        position: absolute;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 48px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 11px;
+  &__brand-img {
+    display: block;
+    height: 20px;
+    width: auto;
+  }
 
-        background: transparent;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        transition: background 0.2s ease;
+  &__toggle {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    flex-shrink: 0;
 
     &-icon {
-        width: 24px;
-        height: 24px;
-        display: block;
+      width: 24px;
+      height: 24px;
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
     }
 
-    img {
-        transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    &:hover {
-        background-color: #552479; // igual aos outros ícones
-        img {
-            opacity: 0.7;
-            transform: scale(1.08);
-        }
+    &:hover &-icon {
+      opacity: 0.7;
+      transform: scale(1.08);
     }
   }
+}
+
+// nav (icons + labels)
+.sidemenu {
+  &__nav {
+    width: 100%;
+  }
+
+  .sidemenu-nav {
+    list-style: none;
+    margin: 96px 0 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    // center each nav item in collapsed mode
+    &__item {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      border-radius: 11px;
+
+      text-decoration: none;
+      color: #fff;
+
+      transition: background-color 0.2s ease;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: #552479;
+
+        .sidemenu-nav__icon {
+          opacity: 0.7;
+          transform: scale(1.08);
+        }
+      }
+    }
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+      display: block;
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    &__icon--employees {
+      width: 24px;
+      height: 24px;
+    }
+
+    // text label – hidden when collapsed
+    &__label {
+      display: none;
+      font-size: $font-size-s;
+      line-height: $line-height-s;
+      white-space: nowrap;
+    }
+
+    &__item--employees {
+      .sidemenu-nav__link {
+        background-color: #552479;
+        cursor: pointer;
+      }
+
+      .sidemenu-nav__icon {
+        opacity: 1;
+        transform: none;
+      }
+
+      .sidemenu-nav__link:hover {
+        background-color: #552479;
+      }
+    }
+  }
+}
+
+// preferences (footer)
+.sidemenu {
+  &__footer {
+    margin-top: auto;
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    border-radius: 11px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #552479;
+
+      .sidemenu__preferences-icon {
+        opacity: 0.7;
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  &__preferences {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      display: block;
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+  }
+
+  // "Preferences" label – hidden when collapsed
+  &__preferences-label {
+    display: none;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    color: #fff;
+    white-space: nowrap;
+  }
+}
+
+// expanded state with overlay
+.app--sidemenu-expanded {
+  .sidemenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 260px;
+    padding-inline: 24px;
+    border-radius: 0 48px 48px 0;
+
+    background-color: $color-bg-sidebar;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.3);
+
+    align-items: flex-start;
+  }
+
+  .sidemenu__brand {
+    display: block;
+  }
+
+  .sidemenu-nav__label {
+    display: inline-block;
+  }
+
+  .sidemenu__preferences-label {
+    display: inline-block;
+  }
+
+  // nav items become full-width pills around icon + label
+  .sidemenu-nav__link {
+    width: 100%;
+    height: auto;
+    padding: 8px 16px;
+    justify-content: flex-start;
+  }
+
+  .sidemenu-nav__item--employees .sidemenu-nav__link {
+    background-color: #552479;
+  }
+
+  .sidemenu__footer {
+    width: 100%;
+    height: auto;
+    padding: 8px 16px;
+    justify-content: flex-start;
+  }
+
+  // flip arrow when sidemenu is open
+  .sidemenu__toggle-icon {
+    transform: rotate(180deg);
+  }
+}
+
+// global overlay when sidemenu is expanded
+.app-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--Neutral-neutral-10, #101213);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+  transition: opacity 0.3s ease;
+}
+
+.app--sidemenu-expanded .app-overlay {
+  opacity: 0.2;
+  pointer-events: auto;
 }

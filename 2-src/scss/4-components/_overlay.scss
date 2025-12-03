@@ -1,0 +1,17 @@
+.overlay {
+  position: fixed;
+  inset: 0; // top:0 right:0 bottom:0 left:0
+  background: var(--Neutral-neutral-10, #101213);;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 20;
+}
+
+// when menu is open
+.app--sidemenu-open .overlay--sidemenu {
+  opacity: 0.2;
+  visibility: visible;
+  pointer-events: auto;
+}

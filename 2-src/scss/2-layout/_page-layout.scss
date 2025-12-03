@@ -1,31 +1,20 @@
 @import '../1-base/variables';
 
-.sidemenu {
-  width: 80px;
-  background-color: $color-bg-sidebar;
-  padding: $spacing-lg $spacing-sm;
+.app {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 0 $radius-xl $radius-xl 0;
+  background-color: transparent;
 }
 
-// collapsed right sidebar
-.sidebar-right {
-  position: fixed;
-  top: 0;
-  right: -390px;
-  width: 390px;
-  height: 1024px;
-
-  padding: 40px 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 24px;
-
-  background: $color-bg-card;
-  border-radius: 48px 0 0 48px;
+.main {
+  position: relative;
+  flex: 1;
+  padding: 54px 64px 67px 38px;
+  margin: auto;
+  background-color: $color-bg-page;
+  border-radius: 48px;
   box-shadow: $shadow-soft;
-  z-index: 10;
+
+  // resize when right sidebar expands/collapses
+  transition: margin-right 0.3s ease;
 }

@@ -17,75 +17,99 @@
 </head>
 </head>
 <body class="app">
-    <aside class="sidemenu" aria-label="Main navigation">
-        <!-- logo + angle-double-right -->
+    <aside class="sidemenu sidemenu--collapsed" aria-label="Main navigation">
+        <!-- header: logo + brand + toggle -->
         <div class="sidemenu__header">
-            <img
-                src="assets/icons/logo.svg"
-                alt="App logo"
-                class="sidemenu__logo-img"
-            />
-
-            <button class="sidemenu__toggle" aria-label="Toggle menu">
+            <div class="sidemenu__logo-group">
                 <img
-                    src="assets/icons/angle-double-right.svg"
-                    alt=""
-                    class="sidemenu__toggle-icon" />
+                    src="assets/icons/logo.svg"
+                    alt="Logoipsum logo"
+                    class="sidemenu__logo-img"
+                />
+                <div class="sidemenu__brand">
+                    <img
+                        src="assets/icons/brand.svg"
+                        alt="Brand logo"
+                        class="sidemenu__brand-img"
+                    />
+            </div>
+        </div>
+
+        <button
+            class="sidemenu__toggle"
+            aria-label="Open main navigation"
+            aria-expanded="false"
+            type="button"
+        >
+            <img
+                src="assets/icons/angle-double-right.svg"
+                alt=""
+                class="sidemenu__toggle-icon"
+            />
             </button>
         </div>
 
+        <!-- main navigation -->
         <nav class="sidemenu__nav">
             <ul class="sidemenu-nav">
-                <li class="sidemenu-nav__item sidemenu-nav__item--dashboard">
-                    <a href="#" aria-label="Dashboard">
-                        <img
-                        src="assets/icons/dashboard.svg"
-                        alt=""
-                        class="sidemenu-nav__icon"
-                        />
-                    </a>
-                </li>
+            <li class="sidemenu-nav__item sidemenu-nav__item--homepage">
+                <a href="#" class="sidemenu-nav__link">
+                <img
+                    src="assets/icons/dashboard.svg"
+                    alt=""
+                    class="sidemenu-nav__icon"
+                />
+                <span class="sidemenu-nav__label">Homepage</span>
+                </a>
+            </li>
 
-                <li class="sidemenu-nav__item sidemenu-nav__item--activity">
-                    <a href="#" aria-label="Activity">
-                        <img
-                            src="assets/icons/chart.svg"
-                            alt=""
-                            class="sidemenu-nav__icon"
-                        />
-                    </a>
-                </li>
+            <li class="sidemenu-nav__item sidemenu-nav__item--statistics">
+                <a href="#" class="sidemenu-nav__link">
+                <img
+                    src="assets/icons/chart.svg"
+                    alt=""
+                    class="sidemenu-nav__icon"
+                />
+                <span class="sidemenu-nav__label">Statistics</span>
+                </a>
+            </li>
 
-                <li class="sidemenu-nav__item  sidemenu-nav__item--favorites">
-                    <a href="#" aria-label="Favorites">
-                        <img
-                            src="assets/icons/like.svg"
-                            alt=""
-                            class="sidemenu-nav__icon"
-                        />
-                    </a>
-                </li>
+            <li class="sidemenu-nav__item sidemenu-nav__item--favourites">
+                <a href="#" class="sidemenu-nav__link">
+                <img
+                    src="assets/icons/like.svg"
+                    alt=""
+                    class="sidemenu-nav__icon"
+                />
+                <span class="sidemenu-nav__label">Favourites</span>
+                </a>
+            </li>
 
-                <li class="sidemenu-nav__item sidemenu-nav__item--profile">
-                    <a href="#" aria-label="Profile">
-                        <img
-                            src="assets/icons/profile.svg"
-                            alt=""
-                            class="sidemenu-nav__icon-box"
-                        />
-                    </a>
-                </li>
+            <li class="sidemenu-nav__item sidemenu-nav__item--employees">
+                <a href="#" class="sidemenu-nav__link">
+                <img
+                    src="assets/icons/profile.svg"
+                    alt=""
+                    class="sidemenu-nav__icon sidemenu-nav__icon--employees"
+                />
+                <span class="sidemenu-nav__label">Employees</span>
+                </a>
+            </li>
             </ul>
         </nav>
 
-        <button class="sidemenu__settings" type="button" aria-label="Settings">
+        <!-- preferences -->
+        <div class="sidemenu__footer">
+            <button class="sidemenu__preferences" type="button" aria-label="Preferences">
             <img
                 src="assets/icons/cogwheel.svg"
                 alt=""
-                class="sidemenu__settings-icon"
+                class="sidemenu__preferences-icon"
             />
-        </button>
-    </aside>
+            </button>
+            <span class="sidemenu__preferences-label">Preferences</span>
+        </div>
+        </aside>
 
     <main class="main">
         <header class="main-header">
@@ -452,22 +476,10 @@
                 </footer>
                 </section>
 
-                <!-- chevron left -->
-                <button
-                    class="page-arrow"
-                    type="button"
-                    aria-label="Go to next screen"
-                    >
-                    <img
-                        src="assets/icons/chevron-left.svg"
-                        alt=""
-                        class="page-arrow__icon"
-                    />
-                </button>
             </main>
             <aside class="sidebar-right" aria-label="Secondary panel">
                 <button
-                    class="page-arrow"
+                    class="page-arrow page-arrow--right"
                     type="button"
                     aria-label="Open secondary panel"
                 >
@@ -478,5 +490,9 @@
                     />
                 </button>
             </aside>
+
+            <div class="app-overlay" aria-hidden="true"></div>
+
+            <script src="scripts/js/layout.js"></script>
     </body>
 </html>
