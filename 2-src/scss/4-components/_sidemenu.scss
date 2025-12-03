@@ -226,23 +226,22 @@
   }
 }
 
-// expanded state with overlay
-.app--sidemenu-expanded {
-  .sidemenu {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
 
-    width: 260px;
-    padding-inline: 24px;
-    border-radius: 0 48px 48px 0;
+// expanded state on the element
+.sidemenu--expanded {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
 
-    background-color: $color-bg-sidebar;
-    box-shadow: 0 0 32px rgba(0, 0, 0, 0.3);
+  width: 260px;
+  padding-inline: 24px;
+  border-radius: 0 48px 48px 0;
 
-    align-items: flex-start;
-  }
+  background-color: $color-bg-sidebar;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.3);
+
+  align-items: flex-start;
 
   .sidemenu__brand {
     display: block;
@@ -256,16 +255,11 @@
     display: inline-block;
   }
 
-  // nav items become full-width pills around icon + label
   .sidemenu-nav__link {
     width: 100%;
     height: auto;
     padding: 8px 16px;
     justify-content: flex-start;
-  }
-
-  .sidemenu-nav__item--employees .sidemenu-nav__link {
-    background-color: #552479;
   }
 
   .sidemenu__footer {
@@ -275,13 +269,14 @@
     justify-content: flex-start;
   }
 
-  // flip arrow when sidemenu is open
+  // flip arrow when sidemenu is expanded
   .sidemenu__toggle-icon {
     transform: rotate(180deg);
   }
 }
 
-// global overlay when sidemenu is expanded
+
+// overlay controll with :has()
 .app-overlay {
   position: fixed;
   inset: 0;
@@ -292,7 +287,7 @@
   transition: opacity 0.3s ease;
 }
 
-.app--sidemenu-expanded .app-overlay {
+.app:has(.sidemenu--expanded) .app-overlay {
   opacity: 0.2;
   pointer-events: auto;
 }

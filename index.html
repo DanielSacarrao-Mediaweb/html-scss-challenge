@@ -32,8 +32,8 @@
                         alt="Brand logo"
                         class="sidemenu__brand-img"
                     />
+                </div>
             </div>
-        </div>
 
         <button
             class="sidemenu__toggle"
@@ -477,18 +477,50 @@
                 </section>
 
             </main>
-            <aside class="sidebar-right" aria-label="Secondary panel">
+            <aside class="sidebar-right sidebar-right--collapsed" aria-label="Secondary panel">
                 <button
                     class="page-arrow page-arrow--right"
                     type="button"
                     aria-label="Open secondary panel"
+                    aria-expanded="false"
                 >
                     <img
-                        src="assets/icons/chevron-left.svg"
-                        alt=""
-                        class="page-arrow__icon"
+                    src="assets/icons/chevron-left.svg"
+                    alt=""
+                    class="page-arrow__icon"
                     />
                 </button>
+
+                <div class="sidebar-right__content">
+                    <!-- HEADER: perfil Isaac Williams -->
+                    <header class="sidebar-right__profile">
+                        <div class="sidebar-right__avatar">
+                            <img
+                            src="assets/avatars/sidebar/isaac_williams.png"
+                            alt="Isaac Williams"
+                            class="sidebar-right__avatar-img"
+                            />
+                        </div>
+
+                        <div class="sidebar-right__profile-text">
+                            <p class="sidebar-right__name">Isaac Williams</p>
+                            <p class="sidebar-right__meta">25 years old, London</p>
+                        </div>
+
+                        <button
+                            class="sidebar-right__profile-action"
+                            type="button"
+                            aria-label="Unlock profile"
+                        >
+                            <img
+                            src="assets/icons/sidebar/unlock.svg"
+                            alt=""
+                            class="sidebar-right__profile-action-icon"
+                            />
+                        </button>
+                    </header>
+
+                </div>
             </aside>
 
             <div class="app-overlay" aria-hidden="true"></div>
