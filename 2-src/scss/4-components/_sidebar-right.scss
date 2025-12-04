@@ -8,117 +8,183 @@
   height: 100vh;
   width: 390px;
   flex-shrink: 0;
-  padding: 40px 32px;
+  padding: 24px 24px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   background: $color-bg-card;
   box-shadow: $shadow-soft;
   z-index: 20;
-
   transition: transform 0.3s ease;
-}
 
-// open state (sideout visible)
-.sidebar-right--open {
-  transform: translateX(0);
-}
+  // open state (sideout visible)
+  &--open {
+    transform: translateX(0);
 
-// collapsed state (slides fully to the right, off-screen)
-.sidebar-right--collapsed {
-  transform: translateX(100%);
-}
-
-// internal sidebar content
-.sidebar-right__content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-lg;
-}
-
-// header – Isaac's profile
-.sidebar-right__profile {
-  width: 100%;
-  height: 48px;
-  padding: 4px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  background-color: #ffffff;
-  border-radius: 12px;
-}
-
-.sidebar-right__avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 300px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.sidebar-right__avatar-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.sidebar-right__profile-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.sidebar-right__name {
-  margin: 0;
-  font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
-  color: #101213;
-}
-
-.sidebar-right__meta {
-  margin: 0;
-  margin-top: 2px;
-  font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  color: #00071199;
-}
-
-// button with the "unlock" icon
-.sidebar-right__profile-action {
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border-radius: 12px;
-  border: none;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  transition:
-    background-color 0.2s ease,
-    box-shadow 0.2s ease;
-
-  &:hover {
-    background-color: rgba(16, 18, 19, 0.04);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    // rotates the icon when the sidebar is open
+    .page-arrow__icon {
+      transform: rotate(180deg);
+    }
   }
-}
 
-.sidebar-right__profile-action-icon {
-  width: 24px;
-  height: 24px;
-  display: block;
+  // collapsed state (slides fully to the right, off-screen)
+  &--collapsed {
+    transform: translateX(100%);
+  }
+
+  // internal sidebar content wrapper
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+
+  
+  // header – Isaac's profile
+  &__profile {
+    width: 100%;
+    height: 48px;
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background-color: #ffffff;
+    border-radius: 12px;
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 300px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  &__avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__profile-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__name {
+    margin: 0;
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #101213;
+  }
+
+  &__meta {
+    margin: 0;
+    margin-top: 2px;
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #00071199;
+  }
+
+  // button with the "unlock" icon
+  &__profile-action {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 12px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      background-color: rgba(16, 18, 19, 0.04);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &__profile-action-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+
+
+
+  // user details card: Blood / Height / Weight
+  &__details {
+    width: 100%;
+    padding: 20px 32px;
+    background-color: #E8F1F9;
+    border-radius: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 24px;
+  }
+
+  &__details-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__details-label {
+    margin: 0 0 4px;
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #A3C9EA;
+  }
+
+  &__details-value {
+    margin: 0;
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #5FA1DA;
+  }
+
+  // vertical separators between stats
+  &__details-divider {
+    flex-shrink: 0;
+    width: 2px;
+    height: 54px;
+    background-color: #A3C9EA;
+    border-radius: 0;
+  }
+
+  // calendar section
+  &__calendar {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  // first card below calendar
+  &__card {
+    margin-top: 8px;
+  }
 }
 
 // right sidebar toggle button
@@ -129,11 +195,9 @@
   transform: translateY(-50%);
   width: 40px;
   height: 80px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 0;
   border: 0;
   border-radius: 32px 0 0 32px;
@@ -141,7 +205,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   cursor: pointer;
   z-index: 22;
-
   transition: box-shadow 0.2s ease;
 
   &:hover {
@@ -155,14 +218,417 @@
   }
 }
 
-// rotates the icon when the sidebar is collapsed
-.sidebar-right--collapsed .page-arrow__icon {
-  transform: rotate(180deg);
+// calendar header
+.calendar-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &__month {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #101213;
+  }
+
+  &__toggle {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 10px;
+    display: block;
+  }
+}
+
+// calendar days line
+.calendar-scroller {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  // single day item
+  &__day {
+    flex: 0 0 auto;
+    min-width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    &--active {
+      // active day pill wrapper
+      align-items: center;
+    }
+
+    // items with dot spacing
+    &--has-dot {
+      gap: 2px;
+    }
+  }
+
+  &__weekday {
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #1666ac;
+
+    &--active {
+      color: white;
+    }
+  }
+
+  &__date {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #6a7178;
+
+    &--active {
+      color: white;
+    }
+  }
+
+  // blue pill
+  &__pill {
+    width: 44px;
+    height: 74px;
+    border-radius: 24px;
+    background-color: #1a79cb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    gap: 6px;
+  }
+
+  // blue dot under Friday
+  &__dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #1a79cb;
+    display: block;
+    transform: translateX(4px);
+    margin-top: 2px;
+
+    // white dot inside active pill
+    &--active {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      display: block;
+      background-color: #ffffff;
+      transform: translateX(6px);
+      margin-top: 0;
+    }
+  }
+}
+
+// main card container – Match against Team B
+.workout-card {
+  position: relative;
+  padding: 24px 24px 20px;
+  border-radius: 16px;
+  background-color: #1a79cb;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(19, 76, 146, 0.4);
+
+  // medal illustration
+  &__medal {
+    position: absolute;
+    top: 0;
+    right: 32px;
+    height: 163px;
+    width: auto;
+    opacity: 0.45;
+    pointer-events: none;
+  }
+
+  // text content
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__title {
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+  }
+
+  &__time,
+  &__coach {
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+
+  // white divider line
+  &__divider {
+    position: relative;
+    z-index: 1;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  // team avatars row
+  &__team {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__team-item {
+    // circular blue background behind each avatar
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #A3C9EA;
+    border: 2px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    // overlap avatars to the right
+    + .workout-card__team-item {
+      margin-left: -12px;
+    }
+
+    // "+12" bubble
+    &--more {
+      background-color: #224CA4;
+    }
+  }
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 0;
+
+    // mirror last avatar
+    &--mirrored {
+      transform: scaleX(-1);
+    }
+  }
+
+  // text styles for "+12"
+  &__more {
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: #ffffff;
+  }
+
+  // bottom-right CTA area
+  &__cta {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    background-color: #ffffff;
+    border-radius: 16px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &__cta-icon {
+    width: 12px;
+    height: 16px;
+    display: block;
+  }
+}
+
+// second card: Health appointment
+.appointment-card {
+  position: relative;
+  margin-top: 8px;
+  padding: 20px 20px 16px;
+  border-radius: 16px;
+  background-color: #E8F1F9;
+  box-shadow: none;
+  border: none;
+  overflow: hidden;
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__title {
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #0E426F;
+    margin: 0;
+  }
+
+  &__time,
+  &__doctor {
+    margin: 0;
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #12548D;
+  }
+
+  &__divider {
+    position: relative;
+    z-index: 1;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 1px;
+    width: 70%;
+    background-color: #93B0C8;
+    opacity: 0.3;
+  }
+
+  // "Follow-up" link
+  &__link {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-left: 0;
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1A79CB;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__action {
+    &:hover {
+      background-color: rgba(15, 160, 210, 0.08);
+    }
+  }
+
+  // caduceus illustration on the right corner
+  &__illustration {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    width: 170px;
+    max-height: 140px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+// third card: Post workout sessions / Meditation
+.post-workout {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__title {
+    margin: 0;
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #101213;
+  }
+}
+
+.post-workout-card {
+  position: relative;
+  padding: 20px 24px 16px;
+  border-radius: 16px;
+  background-color: #F1F9FF;
+  overflow: hidden;
+  box-shadow: none;
+  border: none;
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #0E426F;
+  }
+
+  &__time,
+  &__coach {
+    margin: 0;
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #12548D;
+  }
+
+  // lotus illustration in the bottom-right corner
+  &__illustration {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    width: 190px;
+    max-height: 90px;
+    opacity: 0.6;
+    pointer-events: none;
+  }
 }
 
 // when the right sidebar is open, push the main content to the left
 .app:has(.sidebar-right--open) .main {
-  margin-right: 390px; // same as sidebar width
+  margin-right: 390px;
 }
 
 // when the right sidebar is collapsed, reset the main content

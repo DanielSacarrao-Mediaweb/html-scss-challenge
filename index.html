@@ -188,7 +188,7 @@
                 </span>
                 </div>
 
-                <!-- lista de employees -->
+                <!-- employees list -->
                 <div class="employee-list">
                     <!-- Bernard Nguyen -->
                     <article class="employee-row">
@@ -286,9 +286,9 @@
                         </div>
                     </article>
 
-                    <!-- Lily Jones (linha destacada + detalhes visiveis) -->
+                    <!-- Lily Jones (highlighted line + visible details) -->
                     <article class="employee-row employee-row--with-details">
-                        <!-- linha principal destacada -->
+                        <!-- highlighted main line -->
                         <div class="employee-row__main employee-row__main--highlight">
                             <div class="employee-row__cell employee-row__cell--name">
                                 <img
@@ -318,7 +318,7 @@
                             </div>
                         </div>
 
-                        <!-- detalhes visiveis -->
+                        <!-- visible details -->
                         <div class="employee-row__details">
                             <div class="employee-row__details-column">
                                 <h2 class="employee-row__details-title">Personal Detail</h2>
@@ -421,7 +421,7 @@
                     </article>
                 </div>
 
-                <!-- footer: resumo + paginacao -->
+                <!-- footer: resume + pagination -->
                 <footer class="employees__footer">
                     <p class="employees__summary">1 to 4 of 65 records</p>
 
@@ -453,7 +453,7 @@
                             <span class="pagination__page-label">1</span>
                         </button>
 
-                        <!-- outras pags -->
+                        <!-- other pags -->
                         <button class="pagination__page" type="button">2</button>
                         <button class="pagination__page" type="button">3</button>
                         <button class="pagination__page" type="button">4</button>
@@ -492,7 +492,7 @@
                 </button>
 
                 <div class="sidebar-right__content">
-                    <!-- HEADER: perfil Isaac Williams -->
+                    <!-- header: Isaac Williams profile -->
                     <header class="sidebar-right__profile">
                         <div class="sidebar-right__avatar">
                             <img
@@ -520,6 +520,208 @@
                         </button>
                     </header>
 
+                    <div class="sidebar-right__details">
+                        <div class="sidebar-right__details-group">
+                            <p class="sidebar-right__details-label">Blood</p>
+                            <p class="sidebar-right__details-value">O+</p>
+                        </div>
+
+                        <span class="sidebar-right__details-divider"></span>
+
+                        <div class="sidebar-right__details-group">
+                            <p class="sidebar-right__details-label">Height</p>
+                            <p class="sidebar-right__details-value">186cm</p>
+                        </div>
+
+                        <span class="sidebar-right__details-divider"></span>
+
+                        <div class="sidebar-right__details-group">
+                            <p class="sidebar-right__details-label">Weight</p>
+                            <p class="sidebar-right__details-value">90kg</p>
+                        </div>
+                    </div>
+
+                    <!-- calendar -->
+                    <section class="sidebar-right__calendar" aria-label="Workout calendar">
+                        <header class="calendar-header">
+                            <span class="calendar-header__month">March</span>
+
+                            <button
+                            class="calendar-header__toggle"
+                            type="button"
+                            aria-label="Change month"
+                            >
+                            <img
+                                src="assets/icons/sidebar/caret-down.svg"
+                                alt=""
+                                class="calendar-header__icon"
+                            />
+                            </button>
+                        </header>
+
+                        <div class="calendar-scroller">
+                            <div class="calendar-scroller__day">
+                                <span class="calendar-scroller__weekday">Mon</span>
+                                <span class="calendar-scroller__date">9</span>
+                            </div>
+
+                            <div class="calendar-scroller__day">
+                                <span class="calendar-scroller__weekday">Tues</span>
+                                <span class="calendar-scroller__date">10</span>
+                            </div>
+
+                            <!-- active day -->
+                            <div class="calendar-scroller__day calendar-scroller__day--active">
+                                <div class="calendar-scroller__pill">
+                                    <span class="calendar-scroller__weekday calendar-scroller__weekday--active">
+                                    Wed
+                                    </span>
+                                    <span class="calendar-scroller__dot calendar-scroller__dot--active"></span>
+                                    <span class="calendar-scroller__date calendar-scroller__date--active">
+                                    11
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="calendar-scroller__day">
+                                <span class="calendar-scroller__weekday">Thu</span>
+                                <span class="calendar-scroller__date">12</span>
+                            </div>
+
+                            <!-- day with blue dot -->
+                            <div class="calendar-scroller__day calendar-scroller__day--has-dot">
+                                <span class="calendar-scroller__weekday">Fri</span>
+                                <span class="calendar-scroller__dot"></span>
+                                <span class="calendar-scroller__date">13</span>
+                            </div>
+
+                            <div class="calendar-scroller__day">
+                                <span class="calendar-scroller__weekday">Sat</span>
+                                <span class="calendar-scroller__date">14</span>
+                            </div>
+
+                            <div class="calendar-scroller__day">
+                                <span class="calendar-scroller__weekday">Sun</span>
+                                <span class="calendar-scroller__date">15</span>
+                            </div>
+
+                            <div class="calendar-scroller__day calendar-scroller__day--muted">
+                                <span class="calendar-scroller__weekday">Mon</span>
+                                <span class="calendar-scroller__date">16</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- first workout card -->
+                    <section
+                        class="sidebar-right__card workout-card"
+                        aria-label="Upcoming workout: Match against Team B"
+                    >
+                        <!-- decorative medal -->
+                        <img
+                            src="assets/icons/sidebar/medal.svg"
+                            alt=""
+                            class="workout-card__medal"
+                            aria-hidden="true"
+                        />
+
+                        <div class="workout-card__content">
+                            <h2 class="workout-card__title">Match against Team B</h2>
+                            <p class="workout-card__time">9:00AM - 11:30AM</p>
+                            <p class="workout-card__coach">Coach : Nelson Hendricks</p>
+                        </div>
+
+                        <div class="workout-card__divider" aria-hidden="true"></div>
+
+                        <div class="workout-card__team" aria-label="Team members">
+                            <div class="workout-card__team-item">
+                                <img
+                                    src="assets/avatars/sidebar/1.png"
+                                    alt="Team member 1"
+                                    class="workout-card__avatar"
+                                />
+                            </div>
+                            <div class="workout-card__team-item">
+                                <img
+                                    src="assets/avatars/sidebar/2.png"
+                                    alt="Team member 2"
+                                    class="workout-card__avatar"
+                                />
+                            </div>
+                            <div class="workout-card__team-item">
+                                <img
+                                    src="assets/avatars/sidebar/3.png"
+                                    alt="Team member 3"
+                                    class="workout-card__avatar"
+                                />
+                            </div>
+                            <div class="workout-card__team-item">
+                                <img
+                                    src="assets/avatars/sidebar/4.png"
+                                    alt="Team member 4"
+                                    class="workout-card__avatar workout-card__avatar--mirrored"
+                                />
+                            </div>
+
+                            <div
+                                class="workout-card__team-item workout-card__team-item--more"
+                                aria-label="12 more players"
+                            >
+                                <span class="workout-card__more">+12</span>
+                            </div>
+                        </div>
+
+                        <button
+                            class="workout-card__cta"
+                            type="button"
+                            aria-label="See workout details"
+                        >
+                            <img
+                                src="assets/icons/sidebar/chevron-right.svg"
+                                alt=""
+                                class="workout-card__cta-icon"
+                            />
+                        </button>
+                    </section>
+
+                    <!-- second card: Health appointment -->
+                    <section class="sidebar-right__card appointment-card" aria-label="Health appointment">
+                        <div class="appointment-card__content">
+                            <h2 class="appointment-card__title">Health appointment</h2>
+                            <p class="appointment-card__time">9:00AM - 11:30AM</p>
+                            <p class="appointment-card__doctor">Dr. Douglas Wade</p>
+                        </div>
+
+                        <div class="appointment-card__divider" aria-hidden="true"></div>
+
+                        <a href="#" class="appointment-card__link">Follow-up</a>
+
+                        <img
+                            src="assets/icons/sidebar/caduceus.svg"
+                            alt=""
+                            class="appointment-card__illustration"
+                            aria-hidden="true"
+                        />
+                    </section>
+
+                    <!-- third card: Meditation -->
+                    <div class="post-workout">
+                        <h3 class="post-workout__title">Post workout sessions</h3>
+
+                        <article class="post-workout-card">
+                            <div class="post-workout-card__content">
+                            <p class="post-workout-card__title">Meditation</p>
+                            <p class="post-workout-card__time">5:00PM - 6:00PM</p>
+                            <p class="post-workout-card__coach">Coach : Tim Bjorvick</p>
+                            </div>
+
+                            <img
+                            class="post-workout-card__illustration"
+                            src="assets/icons/sidebar/lotus.svg"
+                            alt=""
+                            />
+                        </article>
+                    </div>
                 </div>
             </aside>
 
