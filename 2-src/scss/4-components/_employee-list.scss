@@ -177,6 +177,23 @@
 
   // Lily Jones
   &--with-details {
+
+    &.employee-row--open {
+        .employee-row__details {
+            display: grid;
+     }
+    }
+
+    &:not(.employee-row--open) {
+        .employee-row__details {
+            display: none;
+        }
+
+        .employee-row__main {
+            background-color: $color-bg-card;
+        }
+    }
+
     .badge--success {
       background-color: $color-success-bg-inverted;
       color: $color-success-text-inverted;

@@ -45,4 +45,10 @@
             background: #ADB5BD;
         }
     }
+
+    // active state (toggle on)
+    &--filters-active {
+        background: #ADB5BD;
+        color: darken($color-text-filters, 8%);
+  }
 }
