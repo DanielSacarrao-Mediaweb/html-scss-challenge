@@ -235,50 +235,56 @@ if (filtersButton) {
 
 
 
-// Lily Jones card - expand/collapse
-const lilyRow = document.querySelector('.employee-row--with-details');
+// Employee cards - expand/collapse
+const employeeRows = document.querySelectorAll(
+  '.employee-row.employee-row--with-details'
+);
 
-if (lilyRow) {
-  const lilyToggle = lilyRow.querySelector('.employee-row__status-toggle');
-  const lilyDetails = lilyRow.querySelector('.employee-row__details');
-  const lilyMain = lilyRow.querySelector('.employee-row__main');
-  const lilyIcon = lilyRow.querySelector('.employee-row__status-icon');
+if (employeeRows.length > 0) {
+  employeeRows.forEach((row) => {
+    const toggle = row.querySelector('.employee-row__status-toggle');
+    const details = row.querySelector('.employee-row__details');
+    const main = row.querySelector('.employee-row__main');
+    const icon = row.querySelector('.employee-row__status-icon');
+    const nameEl = row.querySelector('.employee-row__name');
 
-  let isOpen = true; // initial state: open
+    if (!toggle || !details || !main || !icon) return;
 
-  function setLilyState(open) {
-    if (!lilyDetails || !lilyMain || !lilyIcon || !lilyToggle) return;
+    const employeeName = nameEl ? nameEl.textContent.trim() : 'employee';
+    let isOpen = row.classList.contains('employee-row--open');
 
-    isOpen = open;
+    function setRowState(open) {
+      isOpen = open;
 
-    if (open) {
-      // expanded: show details, highlight row and use inverted badge colors
-      lilyDetails.style.display = 'grid';
-      lilyMain.classList.add('employee-row__main--highlight');
-      lilyRow.classList.add('employee-row--with-details');
-      lilyIcon.setAttribute('src', 'assets/icons/arrow-up.svg');
-      lilyToggle.setAttribute('aria-label', 'Hide details for Lily Jones');
-      lilyRow.classList.add('employee-row--open');
-    } else {
-      // collapsed: hide details, remove highlight and make badge like others
-      lilyDetails.style.display = 'none';
-      lilyMain.classList.remove('employee-row__main--highlight');
-      lilyRow.classList.remove('employee-row--with-details');
-      lilyIcon.setAttribute('src', 'assets/icons/arrow-down.svg');
-      lilyToggle.setAttribute('aria-label', 'Show details for Lily Jones');
-      lilyRow.classList.remove('employee-row--open');
+      if (open) {
+        row.classList.add('employee-row--open');
+        main.classList.add('employee-row__main--highlight');
+        icon.setAttribute('src', 'assets/icons/arrow-up.svg');
+        toggle.setAttribute(
+          'aria-label',
+          `Hide details for ${employeeName}`
+        );
+      } else {
+        row.classList.remove('employee-row--open');
+        main.classList.remove('employee-row__main--highlight');
+        icon.setAttribute('src', 'assets/icons/arrow-down.svg');
+        toggle.setAttribute(
+          'aria-label',
+          `Show details for ${employeeName}`
+        );
+      }
     }
-  }
 
-  // ensure a consistent initial state
-  setLilyState(true);
+  // initial state
+  setRowState(isOpen);
 
   // click anywhere on the card (except links) to toggle
-  lilyRow.addEventListener('click', (event) => {
-    const clickedLink = event.target.closest('a');
-    if (clickedLink) return; // keep links usable
+    row.addEventListener('click', (event) => {
+      const clickedLink = event.target.closest('a');
+      if (clickedLink) return;
 
-    setLilyState(!isOpen);
+      setRowState(!isOpen);
+    });
   });
 }
 

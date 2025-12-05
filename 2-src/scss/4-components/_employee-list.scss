@@ -175,7 +175,7 @@
     }
   }
 
-  // Lily Jones
+  // extra details
   &--with-details {
 
     &.employee-row--open {
@@ -197,6 +197,23 @@
     .badge--success {
       background-color: $color-success-bg-inverted;
       color: $color-success-text-inverted;
+    }
+  }
+  
+  // when the card is closed
+  &:not(.employee-row--open) {
+    .employee-row__details {
+      display: none;
+    }
+
+    .employee-row__main {
+      background-color: $color-bg-card;
+    }
+
+    // badge normal (verde clarinho)
+    .badge--success {
+      background-color: $color-success-bg;
+      color: $color-success-text;
     }
   }
 }
